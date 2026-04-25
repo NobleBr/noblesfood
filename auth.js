@@ -5,6 +5,7 @@ import {
   signOut,
   onAuthStateChanged,
   updateProfile,
+  sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
 // =====================
@@ -49,4 +50,17 @@ export async function handleSignIn(email, password) {
 export async function handleSignOut() {
   await signOut(auth);
   window.location.href = "index.html";
+}
+
+// =====================
+// Password Reset
+// =====================
+export async function handlePasswordReset(email) {
+  try {
+    await sendPasswordResetEmail(auth, email);
+    console.log("Password reset email sent to:", email);
+  } catch (err) {
+    console.error("Password reset error:", err.code, err.message);
+    throw err;
+  }
 }
