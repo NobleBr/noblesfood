@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Noble's Food Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="icon" href="./image/nobby icon.jpeg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./image/food logo.jpeg"
+          alt="Noble's Food Hub Logo"
+          class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">
+              Services ▾
+            </button>
+            <div class="dropdown-menu" id="servicesMenu">
+              <a href="menu.html">Foreign Dishes</a>
+              <a href="menu.html">Continental Cuisine</a>
+              <a href="menu.html">Local Specialties</a>
+            </div>
+          </li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="login.html" class="btn-signin">Sign In</a>
+      </div>
+      <button
+        class="hamburger"
+        onclick="toggleMobileNav()"
+        aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="page-banner">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you</p>
+    </div>
+
+    <div class="form-page">
+      <div class="form-box">
+        <h2>Send Us a Message</h2>
+        <p class="form-subtitle">
+          Fill in the form below and we'll get back to you shortly.
+        </p>
+
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input type="hidden" name="access_key" value="31c3e8a4-b948-4b7f-8fd9-bb7763079cc2" />
+          <input type="hidden" name="subject" value="New Contact Form Submission" />
+          <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+          <input type="checkbox" name="botcheck" style="display: none" />
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. John Doe"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required />
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="order">Order Issue</option>
+              <option value="feedback">Feedback</option>
+              <option value="support">Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Write your message here..."
+              required></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+
+        <p class="form-link">
+          Need immediate help? Call us:
+          <a href="tel:+233557059446">+233557059446</a>
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Noble's Food Hub | All Rights Reserved</p>
+      <p>
+        +233557059446 &nbsp;|&nbsp;
+        <a href="mailto:noblefoodhub@gmail.com">noblefoodhub@gmail.com</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>

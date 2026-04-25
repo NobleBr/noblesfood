@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - Noble's Food Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="icon" href="./image/nobby icon.jpeg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./image/food logo.jpeg"
+          alt="Noble's Food Hub Logo"
+          class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">
+              Services ▾
+            </button>
+            <div class="dropdown-menu" id="servicesMenu">
+              <a href="menu.html">Foreign Dishes</a>
+              <a href="menu.html">Continental Cuisine</a>
+              <a href="menu.html">Local Specialties</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="login.html" class="btn-signin">Sign In</a>
+      </div>
+      <button
+        class="hamburger"
+        onclick="toggleMobileNav()"
+        aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="page-banner">
+      <h1>About Us</h1>
+      <p>The story behind Noble's Food Hub</p>
+    </div>
+
+    <section class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>Our Story</h2>
+          <p>
+            Noble's Food Hub was founded with a simple mission — to bring the
+            world's best flavours to your table. We believe that great food
+            should be accessible to everyone, no matter where you are.
+          </p>
+          <p>
+            What started as a small kitchen experiment has grown into a full
+            food delivery service serving customers across the city. We work
+            with the freshest local ingredients and skilled chefs who are
+            passionate about every dish they prepare.
+          </p>
+          <p>
+            Whether you crave a classic local specialty, a continental
+            favourite, or a bold foreign dish, we have something on our menu
+            just for you.
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="./image/Food 1234.jpg" alt="Our food" />
+        </div>
+      </div>
+
+      <h2 style="text-align: center; color: #2c3e50; margin-bottom: 25px">
+        What We Stand For
+      </h2>
+      <div class="values-grid">
+        <div class="value-card">
+          <h3>🌿 Fresh Quality</h3>
+          <p>
+            We source fresh ingredients daily and never compromise on quality.
+            Your health and satisfaction come first.
+          </p>
+        </div>
+        <div class="value-card">
+          <h3>🚀 Reliable Delivery</h3>
+          <p>
+            We take pride in fast, reliable delivery. Your meal arrives hot and
+            on time, every time.
+          </p>
+        </div>
+        <div class="value-card">
+          <h3>🌍 Diverse Menu</h3>
+          <p>
+            From local dishes to global cuisines, our menu celebrates food from
+            across cultures and traditions.
+          </p>
+        </div>
+        <div class="value-card">
+          <h3>❤️ Made with Love</h3>
+          <p>
+            Every meal is carefully prepared by our kitchen team who put passion
+            and care into everything they cook.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Noble's Food Hub | All Rights Reserved</p>
+      <p>
+        +233557059446 &nbsp;|&nbsp;
+        <a href="mailto:noblefoodhub@gmail.com">noblefoodhub@gmail.com</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>

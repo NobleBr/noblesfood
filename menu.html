@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu - Noble's Food Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="icon" href="./image/nobby icon.jpeg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./image/food logo.jpeg"
+          alt="Noble's Food Hub Logo"
+          class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn active" onclick="toggleDropdown()">
+              Services ▾
+            </button>
+            <div class="dropdown-menu" id="servicesMenu">
+              <a href="menu.html">Foreign Dishes</a>
+              <a href="menu.html">Continental Cuisine</a>
+              <a href="menu.html">Local Specialties</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="login.html" class="btn-signin">Sign In</a>
+      </div>
+      <button
+        class="hamburger"
+        onclick="toggleMobileNav()"
+        aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="page-banner">
+      <h1>Our Menu</h1>
+      <p>Fresh dishes made daily — order your favourite below</p>
+    </div>
+
+    <section class="menu-section">
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="./image/Food 12.jpg" alt="Grilled Chicken Salad" />
+          <div class="menu-card-body">
+            <h2>Grilled Chicken Salad</h2>
+            <p>
+              A healthy and delicious salad with grilled chicken, fresh
+              vegetables, and a tangy dressing.
+            </p>
+          </div>
+          <div class="menu-card-footer">
+            <span class="price">GH₵12.99</span>
+            <a href="order.html"><button class="btn-add">Order Now</button></a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./image/Food 123.jpg" alt="Spaghetti Carbonara" />
+          <div class="menu-card-body">
+            <h2>Spaghetti Carbonara</h2>
+            <p>
+              A classic Italian pasta dish made with eggs, cheese, pancetta, and
+              freshly ground pepper.
+            </p>
+          </div>
+          <div class="menu-card-footer">
+            <span class="price">GH₵14.99</span>
+            <a href="order.html"><button class="btn-add">Order Now</button></a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <img src="./image/Food 1234.jpg" alt="Margherita Pizza" />
+          <div class="menu-card-body">
+            <h2>Margherita Pizza</h2>
+            <p>
+              A simple yet flavorful pizza topped with fresh tomatoes,
+              mozzarella cheese, and basil.
+            </p>
+          </div>
+          <div class="menu-card-footer">
+            <span class="price">GH₵10.99</span>
+            <a href="order.html"><button class="btn-add">Order Now</button></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Noble's Food Hub | All Rights Reserved</p>
+      <p>
+        +233557059446 &nbsp;|&nbsp;
+        <a href="mailto:noblefoodhub@gmail.com">noblefoodhub@gmail.com</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>

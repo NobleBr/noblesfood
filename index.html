@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noble's Food Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="icon" href="./image/nobby icon.jpeg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">
+        <img
+          src="./image/food logo.jpeg"
+          alt="Noble's Food Hub Logo"
+          class="logo" />
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">
+              Services ▾
+            </button>
+            <div class="dropdown-menu" id="servicesMenu">
+              <a href="menu.html">Foreign Dishes</a>
+              <a href="menu.html">Continental Cuisine</a>
+              <a href="menu.html">Local Specialties</a>
+            </div>
+          </li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-right">
+        <a href="login.html" class="btn-signin">Sign In</a>
+      </div>
+      <button
+        class="hamburger"
+        onclick="toggleMobileNav()"
+        aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Welcome to Noble's Food Hub</h1>
+        <p class="tagline">Delicious Food Delivered to Your Doorstep</p>
+        <p>
+          Experience the best of culinary delights with Food Hub. We offer a
+          wide variety of dishes from around the world, made with fresh
+          ingredients and delivered straight to you.
+        </p>
+        <a href="order.html" class="btn-order">Order Now</a>
+      </div>
+      <div class="hero-image">
+        <div class="slider">
+          <div class="slides">
+            <img src="./image/Food 12.jpg" alt="Food 1" />
+            <img src="./image/Food 123.jpg" alt="Food 2" />
+            <img src="./image/Food 1234.jpg" alt="Food 3" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2>Why Choose Us?</h2>
+      <p class="subtitle">We make it easy to enjoy great food at home</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="icon">🍽️</div>
+          <h3>Fresh Ingredients</h3>
+          <p>
+            Every dish is made with the freshest ingredients sourced daily from
+            trusted local suppliers.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🚀</div>
+          <h3>Fast Delivery</h3>
+          <p>
+            We deliver your favourite meals quickly and reliably, right to your
+            front door.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🌍</div>
+          <h3>World Flavours</h3>
+          <p>
+            Explore cuisines from around the world — from local specialties to
+            continental classics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Noble's Food Hub | All Rights Reserved</p>
+      <p>
+        +233557059446 &nbsp;|&nbsp;
+        <a href="mailto:noblefoodhub@gmail.com">noblefoodhub@gmail.com</a>
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script type="module" src="auth.js"></script>
+  </body>
+</html>
