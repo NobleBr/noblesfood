@@ -1,4 +1,4 @@
-import { auth } from "./firebase.js";
+import { auth, app } from "./firebase.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -7,6 +7,9 @@ import {
   updateProfile,
   sendPasswordResetEmail,
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+import { getFirestore, doc, setDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-firestore.js";
+
+const db = getFirestore(app);
 
 // =====================
 // Auth State — update nav on every page
@@ -33,6 +36,14 @@ onAuthStateChanged(auth, (user) => {
 export async function handleSignUp(name, email, password) {
   const credential = await createUserWithEmailAndPassword(auth, email, password);
   await updateProfile(credential.user, { displayName: name });
+
+  // Save user profile to Firestore
+  await setDoc(doc(db, "users", credential.user.uid), {
+    name: name,
+    email: email,
+    createdAt: serverTimestamp(),
+  });
+
   return credential.user;
 }
 
