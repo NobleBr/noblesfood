@@ -202,10 +202,12 @@
         const password = document.getElementById("signup-password").value;
         setLoading("signup-btn", true);
         try {
-          await handleSignUp(name, email, password);
+          const user = await handleSignUp(name, email, password);
+          console.log("Account created successfully:", user.uid, user.email);
           showMessage("signup-message", "Account created! Redirecting...", false);
           setTimeout(() => (window.location.href = "index.html"), 1200);
         } catch (err) {
+          console.error("Signup error:", err.code, err.message);
           showMessage("signup-message", friendlyError(err.code), true);
           setLoading("signup-btn", false);
         }
